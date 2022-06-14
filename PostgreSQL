@@ -1,19 +1,18 @@
-pip install psycopg2
-
-#Connector
-conn = psycopg2.connect(
-    host="localhost",
-    database="suppliers",
-    user="postgres",
-    password="Abcd1234")
-
-
-#Read data
+import mysql.connector
 from configparser import ConfigParser
 
 
-def config(filename='database.ini', section='postgresql'):
-    # create a parser
-    parser = ConfigParser()
-    # read config file
-    parser.read(filename)
+class postgresql():
+    def __init__(self, db1):
+        self.dbl = dbl
+        self.conn = psycopg2.connect(
+            host="localhost",
+            database="suppliers",
+            user="postgres",
+            password="Abcd1234")
+
+    def config(self, filename, section):
+        self.filename = filename
+        self.section = section
+        parser = ConfigParser()
+        parser.read(filename)
