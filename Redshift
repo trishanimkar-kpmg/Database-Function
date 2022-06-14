@@ -1,0 +1,20 @@
+import redshift-connector
+
+
+#Connecting to an Amazon Redshift cluster using AWS credentials
+conn = redshift_connector.connect(
+     host='examplecluster.abc123xyz789.us-west-1.redshift.amazonaws.com',
+     database='dev',
+     user='awsuser',
+     password='my_password'
+  )
+
+
+
+
+#Querying a table
+cursor.execute("select * from book")
+
+#Retrieving the query result set
+result: tuple = cursor.fetchall()
+ print(result)
