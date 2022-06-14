@@ -1,18 +1,16 @@
-#Connector
 import mysql.connector
+class mysql():
+    def __init__(self,db1):
+        self.dbl = dbl
 
-mydb= mysql.connector.connect(user='scott', password='password',
+        self.db= mysql.connector.connect(user='scott', password='password',
                               host='127.0.0.1',
                               database='employees')
-mydb.close()
-
-
-
-
-#How to read the Data(Tabular)
-my_database = mydb.cursor()
-sql_statement = "SELECT * FROM CODESPEEDY"
-my_database.execute(sql_statement)
-output = my_database.fetchall()
-for x in output:
-  print(x)
+    def read(self,table):
+        self.table=table
+        my_database = mydb1.cursor()
+        sql_statement = "SELECT * FROM table"
+        my_database.execute(sql_statement)
+        output = my_database.fetchall()
+        for x in output:
+             print(x)
