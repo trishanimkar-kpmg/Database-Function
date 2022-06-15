@@ -1,16 +1,12 @@
 import sqlite3
-#Connect
+class Redshift():
 
-con = sqlite3.connect('example.db')
-cursor = con.cursor()
-
-
-
-
-
-# Open a database in read-only mode.
-sqlite_select_Query = "select sqlite_version();"
-cursor.execute(sqlite_select_Query)
-record = cursor.fetchall()
-print("SQLite Database Version is: ", record)
-cursor.close()
+    def __init__(self, dbl):
+        self.dbl = dbl
+        db=sqlite3.connect('example.db')
+        cursor = con.cursor()
+        sqlite_select_Query = "select sqlite_version();"
+        cursor.execute(sqlite_select_Query)
+        record = cursor.fetchall()
+        print("SQLite Database Version is: ",record)
+        cursor.close()
